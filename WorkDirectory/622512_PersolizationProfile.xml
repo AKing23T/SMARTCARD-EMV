@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<ApplicationMapping Version="1.0.0" >
+
+
+<CardInfo  From="VSDC" CardManager="A0000000030000" KMCDiversificationMethod="" > </CardInfo>
+
+<Directory Id="DF01" Action="Delete" Aid="Tag_4F"  apdu= "80E40000094F07A0000000031010">
+</Directory>
+
+<Directory Id="DF02" Action="Delete" Aid="315041592E5359532E4444463031"  apdu= "80E40000104F0E315041592E5359532E4444463031">
+</Directory>
+
+<Directory Id="DF02" Action="Delete" Aid="325041592E5359532E4444463031"  apdu= "80E40000104F0E325041592E5359532E4444463031">
+</Directory>
+
+
+<!--PSE-->
+<Directory Id="DF02" Action="Install" Aid="315041592E5359532E4444463031" apdu= "80E60C002406A0000000031007A00000000310500E315041592E5359532E4444463031010002C90000">
+
+		<Record Id="0101" Type="DGI" >
+			<Tag  Type="T" Id="70"  					></Tag> 
+			<Tag  Type="T" Id="61" 						></Tag> 
+			<Tag  Type="M" Id="4F" 		Format="TLV" 	></Tag> 
+			<Tag  Type="M" Id="50" 		Format="TLV" 	></Tag> 
+			<Tag  Type="O" Id="9F12" 	Format="TLV" 	></Tag> 
+			<Tag  Type="M" Id="87" 		Format="TLV" 	></Tag> 
+		</Record>
+
+		<Record  Id="9102" Type="DGI" Last="true" >
+			<Tag  Type="T" Id="A5" 						></Tag> 
+			<Tag  Type="S" Id="88" 		Format="TLV" 	>01</Tag> 
+			<Tag  Type="O" Id="5F2D" 	Format="TLV" 	></Tag> 
+			<Tag  Type="O" Id="9F11" 	Format="TLV" 	></Tag> 
+			<Tag  Type="O" Id="BF0C" 	Format="TLV" 	></Tag> 
+		</Record>
+
+</Directory>
+
+<!--PPSE-->
+<Directory Id="DF03" Action="Install" Aid="325041592E5359532E4444463031" apdu= "80E60C002406A0000000031007A00000000310500E325041592E5359532E4444463031010002C90000">
+
+
+		<Record  Id="9102" Type="DGI" Last="true" >
+			<Tag  Type="T" Id="A5" 																		></Tag> 
+				<Tag  Type="T" Id="BF0C" 																></Tag> 
+					<Tag  Type="T" Id="61" 																></Tag> 
+						<Tag  Type="M" Id="4F" 		Format="TLV" 	Info="AID" 							></Tag> 
+						<Tag  Type="M" Id="50" 		Format="TLV" 	Info="ApplicationLabel" 			></Tag> 
+						<Tag  Type="M" Id="87" 		Format="TLV" 	Info="ApplicationPriorityIndicator" ></Tag> 
+		</Record>
+
+
+</Directory>
+ 
+<Directory Id="DF01" Action="Install" Aid="Tag_4F" apdu= "80E60C001D06A0000000031007A000000003105607A0000000031010011002C90000">
+
+	
+	<Record  Id="9102" Type="DGI" >
+			<Tag  Type="T" Id="A5" 					></Tag> 
+			<Tag  Type="M" Id="50"   Format="TLV" 	></Tag> 
+			<Tag  Type="M" Id="87"   Format="TLV" 	></Tag> 
+			<Tag  Type="M" Id="5F2D" Format="TLV" 	></Tag> 
+			<Tag  Type="M" Id="9F11" Format="TLV" 	></Tag> 
+			<Tag  Type="M" Id="9F12" Format="TLV" 	></Tag> 
+	</Record>
+	
+	<!-- GPO RESPONSE DATA VSDC -->	
+	<Record  Id="9104" Type="DGI" >
+		<Tag  Type="M" Id="82"      Format="TLV" Info="AIP VSDC" ></Tag>  
+		<Tag  Type="S" Id="94"      Format="TLV" Info="AFL VSDC" >08010100 10010300 18010201</Tag>
+	</Record>
+
+	<!-- SELECT RESPONSE DATA CONTACTLESS -->	
+	<Record  Id="9103" Type="DGI" >
+		<Tag  Type="T" Id="A5" ></Tag> 
+		<Tag  Type="M" Id="50"   Format="TLV" From="EMV_CL" ></Tag> 
+		<Tag  Type="M" Id="9F38" Format="TLV" From="EMV_CL" ></Tag> 
+		<Tag  Type="M" Id="5F2D" Format="TLV"  ></Tag> 
+	</Record>
+	
+	<!-- GPO RESPONSE DATA - qVSDC -->			
+	<Record  Id="9207" Type="DGI" >
+		<Tag  Type="M" Id="82"   Format="TLV" Info="AIP qVSDC"  From="EMV_CL" ></Tag> 
+		<Tag  Type="S" Id="94"   Format="TLV" Info="AFL qVSDC"  From="EMV_CL" >08020200 10020300 10040501</Tag>
+		<Tag  Type="M" Id="9F10" Format="TLV" From="EMV_CL"></Tag> 					
+	</Record>
+    
+	<!-- ISSUER APPLICATION DATA -->		
+	<Record  Id="9200" Type="DGI" >
+		<Tag  Type="M" Id="9F10" Format="TLV" ></Tag> 
+	</Record>
+	
+	<!-- SFI 1 RECORD 1 VSDC -->	
+	<Record  Id="0101" Type="DGI" >
+		<Tag  Type="T" Id="70"  				  ></Tag> 
+		<Tag  Type="M" Id="57" 	     Format="TLV" ></Tag> 
+		<Tag  Type="M" Id="5F20" 	 Format="TLV" ></Tag> 
+		<Tag  Type="M" Id="9F1F" 	 Format="TLV" ></Tag> 
+		<Tag  Type="O" Id="9F0B" 	 Format="TLV" ></Tag> 			
+		<Tag  Type="M" Id="5F30"     Format="TLV" ></Tag> 
+		<Tag  Type="O" Id="9F14" 	 Format="TLV" ></Tag> 	
+		<Tag  Type="O" Id="9F23" 	 Format="TLV" ></Tag> 			
+	</Record>
+	
+		<!-- SFI 1 RECORD 2 VSDC -->	
+	<Record  Id="0102" Type="DGI" >
+		<Tag  Type="T" Id="70"  				  ></Tag> 
+		<Tag  Type="M" Id="9F1F" 	 Format="TLV" ></Tag>  			
+		<Tag  Type="M" Id="5F30"     Format="TLV" ></Tag> 			
+	</Record>
+	
+	<!-- SFI 2 RECORD 1 DDA FOR VSDC -->			
+	<Record  Id="0201" Type="DGI" >
+		<Tag  Type="T" Id="70"  				></Tag> 
+		<Tag  Type="M" Id="9F46" Format="TLV" 	></Tag> 
+		<Tag  Type="M" Id="9F49" Format="TLV" 	></Tag> 
+	</Record>
+	
+	<!-- SFI 2 RECORD 2 DDA FOR VSDC -->		
+	<Record  Id="0202" Type="DGI" >
+		<Tag  Type="T" Id="70"  				></Tag> 
+		<Tag  Type="M" Id="8F"   Format="TLV" 	></Tag> 
+		<Tag  Type="M" Id="90"   Format="TLV" 	></Tag> 
+		<Tag  Type="M" Id="92"   Format="TLV" 	></Tag> 
+		<Tag  Type="M" Id="9F32" Format="TLV" 	></Tag> 			
+	</Record>
+	
+	<!-- SFI 2 RECORD 3  signed data -->
+	<Record  Id="0203" Type="DGI" >
+		<Tag  Type="T" Id="70"				  ></Tag> 
+		<Tag  Type="O" Id="9F48" Format="TLV" 	></Tag>  
+		<Tag  Type="M" Id="9F47" Format="TLV" 	></Tag>
+	</Record>	
+
+	<!-- SFI 2 RECORD 4 qVSDC  signed data -->		
+	<Record  Id="0204" Type="DGI" >
+		<Tag  Type="T" Id="70"				  ></Tag> 
+		<Tag  Type="M" Id="5A" Format="TLV"   ></Tag> 
+		<Tag  Type="M" Id="5F24" Format="TLV" ></Tag> 
+		<Tag  Type="M" Id="5F25" Format="TLV" ></Tag> 
+		<Tag  Type="M" Id="5F34" Format="TLV" ></Tag>
+		<Tag  Type="M" Id="5F28" Format="TLV" ></Tag> 
+		<Tag  Type="M" Id="9F07" Format="TLV" ></Tag> 
+		<Tag  Type="M" Id="9F08" Format="TLV" ></Tag> 
+		<Tag  Type="M" Id="9F4A" Format="TLV" ></Tag> 
+	</Record>
+	
+	<!-- SFI 2 RECORD 5 qVSDC -->			
+	<Record  Id="0205" Type="DGI" >
+		<Tag  Type="T" Id="70"  				></Tag> 
+		<Tag  Type="M" Id="9F46" Format="TLV" From="EMV_CL"	></Tag> 
+		<Tag  Type="M" Id="9F69" Format="TLV" From="EMV_CL" ></Tag>				
+	</Record>
+	
+	<!-- SFI 3 RECORD 1 VSDC signed data -->
+	<Record  Id="0301" Type="DGI" >
+		<Tag  Type="T" Id="70"  			></Tag> 
+		<Tag  Type="M" Id="5A"	 Format="TLV" ></Tag> 
+		<Tag  Type="M" Id="5F24" Format="TLV" ></Tag> 
+		<Tag  Type="M" Id="5F25" Format="TLV" ></Tag>		
+		<Tag  Type="M" Id="5F34" Format="TLV" ></Tag>
+		<Tag  Type="M" Id="5F28" Format="TLV" ></Tag>
+		<Tag  Type="M" Id="9F07" Format="TLV" ></Tag> 	
+		<Tag  Type="M" Id="9F08" Format="TLV" ></Tag>	
+		<Tag  Type="M" Id="8E"   Format="TLV" ></Tag> 
+		<Tag  Type="M" Id="9F0D" Format="TLV" ></Tag> 
+		<Tag  Type="M" Id="9F0E" Format="TLV" ></Tag> 
+		<Tag  Type="M" Id="9F0F" Format="TLV" ></Tag> 		 			
+		<Tag  Type="M" Id="9F4A" Format="TLV" ></Tag> 
+	</Record>
+
+	<!-- SFI 3 RECORD 2 VSDC non signed data -->		
+	<Record  Id="0302" Type="DGI" >
+		<Tag  Type="T" Id="70"				  ></Tag> 
+		<Tag  Type="M" Id="8C"   Format="TLV" ></Tag> 
+		<Tag  Type="M" Id="8D"   Format="TLV" ></Tag> 
+		<Tag  Type="O" Id="9F42" Format="TLV" ></Tag> 
+		<Tag  Type="O" Id="9F44" Format="TLV" ></Tag> 			
+	</Record>	
+		
+	<!-- INTERNAL CARD DATA -->	
+	<Record  Id="3001" Type="DGI" >
+			<Tag  Type="M" Id="57"   Format="TLV" ></Tag> 
+			<Tag  Type="M" Id="5F34" Format="TLV" ></Tag>
+			<Tag  Type="M" Id="5F20" Format="TLV" ></Tag>	
+			<Tag  Type="M" Id="9F51" Format="TLV" ></Tag> 
+			<Tag  Type="M" Id="9F52" Format="TLV" ></Tag> 
+			<Tag  Type="O" Id="9F53" Format="TLV" ></Tag>
+			<Tag  Type="O" Id="9F54" Format="TLV" ></Tag> 
+			<Tag  Type="M" Id="9F56" Format="TLV" ></Tag> 
+			<Tag  Type="O" Id="9F57" Format="TLV" ></Tag>
+			<Tag  Type="M" Id="9F58" Format="TLV" ></Tag> 
+			<Tag  Type="M" Id="9F59" Format="TLV" ></Tag>
+			<Tag  Type="M" Id="9F5E" Format="TLV" ></Tag> 
+			<Tag  Type="M" Id="9F68" Format="TLV" From="EMV_CL" ></Tag> 
+			<Tag  Type="M" Id="9F6C" Format="TLV" From="EMV_CL" ></Tag> 
+			<Tag  Type="O" Id="9F6B" Format="TLV" From="EMV_CL" ></Tag> 
+			<Tag  Type="O" Id="9F6D" Format="TLV" ></Tag> 
+			<Tag  Type="M" Id="9F72" Format="TLV" ></Tag> 
+			<Tag  Type="M" Id="9F77" Format="TLV" From="EMV_CL" ></Tag> 
+			<Tag  Type="O" Id="9F78" Format="TLV" From="EMV_CL" ></Tag> 	
+			<Tag  Type="M" Id="9F79" Format="TLV" From="EMV_CL" ></Tag> 	
+	</Record>
+	
+	<!-- RSA KEYS CRT FORMAT -->	
+	<Record  Id="8201" Type="DGI_Encrypted" SecretType="DO_Padding" >
+		<Tag  Type="M" Id="DF51" Format="Value" Info="CRT Qinv"	></Tag>
+	</Record>
+	<Record  Id="8202" Type="DGI_Encrypted" SecretType="DO_Padding" >
+		<Tag  Type="M" Id="DF52" Format="Value" Info="CRT DQ"></Tag>
+	</Record>
+	<Record  Id="8203" Type="DGI_Encrypted" SecretType="DO_Padding" >
+		<Tag  Type="M" Id="DF53" Format="Value" Info="CRT DP"></Tag>
+	</Record>
+	<Record  Id="8204" Type="DGI_Encrypted" SecretType="DO_Padding" >
+		<Tag  Type="M" Id="DF54" Format="Value" Info="CRT q"></Tag>
+	</Record>
+	<Record  Id="8205" Type="DGI_Encrypted" SecretType="DO_Padding" >
+		<Tag  Type="M" Id="DF55" Format="Value" Info="CRT p"></Tag>
+	</Record>
+		
+	<!-- DES KEYS -->	
+	<Record  Id="8000" Type="DGI_Encrypted" >
+		<Tag  Type="M" Id="DF62" Format="Value" ></Tag> 
+		<Tag  Type="M" Id="DF63" Format="Value" ></Tag> 
+		<Tag  Type="M" Id="DF64" Format="Value" ></Tag> 
+	</Record>
+	
+	<!-- DES KCV -->	
+	<Record  Id="9000" Type="DGI" >
+		<Tag  Type="M" Id="DF6A" Format="Value" ></Tag> 
+		<Tag  Type="M" Id="DF6B" Format="Value" ></Tag> 
+		<Tag  Type="M" Id="DF6C" Format="Value" ></Tag> 
+	</Record>
+	
+	
+	<Record  Id="8010" Type="DGI_Encrypted" >
+		<Tag  Type="M" Id="DF01" Format="Value" ></Tag> 
+	</Record>
+	
+	<Record Id="9010" Type="DGI" Last="true" >
+		<Tag  Type="M" Id="9F17" 	info="Pin Try Counter" Format="Value" 	></Tag> 
+    </Record>
+  
+</Directory>
+
+
+<EndPerso LockCard="false" >
+</EndPerso>
+
+</ApplicationMapping>

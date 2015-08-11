@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ApplicationMapping Version="1.0.0" >
+
+<Application>
+
+    <!--Config Parameter -->
+	<TagValue Tag="DFF1" To="Contact"  Name="SDA" Encoding="HEX" >5A,5F24,5F25,5F34,5F28,9F07,9F08,8E,9F0D,9F0E,9F0F,9F4A</TagValue>
+	<TagValue Tag="DFF2" To="Contact"  Name="MonthsForEffectiveDate" Encoding="HEX" >0</TagValue>
+	<TagValue Tag="DFF3" To="Contact"  Name="ICC_PK_Size" Encoding="HEX">1024</TagValue> 
+	<TagValue Tag="DFF4" To="Contact"  Name="Handle_iCVV" Encoding="HEX">true</TagValue>
+	<TagValue Tag="DFF5" To="Contact"  Name="CVV_Offset" Encoding="HEX">0A</TagValue> 	
+	
+	<!-- Mandatory tags -->
+	
+	<TagValue Tag="4F"   To="Contact"  Name="AID" Encoding="HEX" >A0000000031010</TagValue>
+	<TagValue Tag="82"   To="Contact"  Name="AIP" Encoding="HEX" >3C00</TagValue>
+	<TagValue Tag="9F7D" To="Contact"  Name="ApplicationCodeLevel" Encoding="HEX">313030393037205653444320323831</TagValue>
+
+	<TagValue Tag="88" 	 To="Contact"  Name="SFIoftheDirectoryFile" Encoding="HEX">01</TagValue>	
+	<TagValue Tag="5F34" To="Contact"  Name="PAN_SequenceNumber" Encoding="HEX" OverWrite="false" >00</TagValue>
+	<TagValue Tag="9F4A" To="Contact"  Name="SDA_TagList" Encoding="HEX" >82</TagValue>
+	
+	<TagValue Tag="9F07" To="Contact"  Name="AUC" Encoding="HEX" >FF00</TagValue>
+	<TagValue Tag="9F49" To="Contact"  Name="DDOL" Encoding="HEX">9F3704</TagValue>
+	<TagValue Tag="50"   To="Contact"  Name="ApplicationLabel" Encoding="ASCII" OverWrite="false">Visa Credit</TagValue>
+	<TagValue Tag="5F2D" To="Contact"  Name="LanguagePreference" Encoding="ASCII" OverWrite="false" >en</TagValue>
+	<TagValue Tag="9F11" To="Contact"  Name="IssuerCodeTableIndex" Encoding="HEX">01</TagValue>
+	<TagValue Tag="87"   To="Contact"  Name="ApplicationPriorityIndicator" Encoding="HEX">01</TagValue>	
+	<TagValue Tag="9F12" To="Contact"  Name="ApplicationPreferredName" Encoding="ASCII" OverWrite="false">Visa Credit</TagValue> 
+	<TagValue Tag="8E"   To="Contact"  Name="CVM_List" Encoding="HEX"  OverWrite="false">00 00 00 00 00 00 00 00 02 01 1E 03 1F 02</TagValue>
+	<TagValue Tag="8C"   To="Contact"  Name="CDOL1" Encoding="HEX" >9F 02 06 9F 03 06 9F 1A 02 95 05 5F 2A 02 9A 03 9C 01 9F 37 04 </TagValue>
+	<TagValue Tag="8D"   To="Contact"  Name="CDOL2" Encoding="HEX" >8A 02 9F 02 06 9F 03 06 9F 1A 02 95 05 5F 2A 02 9A 03 9C 01 9F 37 04</TagValue>
+	<TagValue Tag="9F0D" To="Contact"  Name="IAC_Default" Encoding="HEX" >B8 60 AC 88 00</TagValue>
+	<TagValue Tag="9F0E" To="Contact"  Name="IAC_Denial" Encoding="HEX" >00 10 00 00 00</TagValue>
+	<TagValue Tag="9F0F" To="Contact"  Name="IAC_Online" Encoding="HEX" >B8 68 BC 98 00</TagValue>
+	<TagValue Tag="9F52" To="Contact"  Name="ApplicationDefaultAction" Encoding="HEX" >82080000</TagValue>
+	<TagValue Tag="9F17" To="Contact"  Name="PIN_TryCounter" Encoding="HEX" >03</TagValue>	
+	<TagValue Tag="9F10" To="Contact"  Name="IssuerApplicationData" Encoding="HEX" >
+		<Tag  Type="S" Format="HEX" Info="1st byte of 9F10" >06</Tag>  
+		<Tag  Type="O" Id="DF07"  Format="Value" Info="DKI" From="EMV">00</Tag>  		
+		<Tag  Type="S" Format="HEX" Info="last bytes of 9F10" >0A 03 00 00 00</Tag>	
+	</TagValue>	
+	<TagValue Tag="9F58" To="Contact"  Name="LCOL_VISA" Encoding="HEX" OverWrite="false">03</TagValue>
+	<TagValue Tag="9F59" To="Contact"  Name="UCOL_VISA" Encoding="HEX" OverWrite="false">05</TagValue>
+	<TagValue Tag="9F72" To="Contact"  Name="ConsecutiveOfflineTransactionLimit" Encoding="HEX" OverWrite="false">00</TagValue>
+	<TagValue Tag="9F53" To="Contact"  Name="ConsecutiveTransactionLimitInternational" Encoding="HEX" OverWrite="false">05</TagValue>
+	<TagValue Tag="9F63" To="Contact"  Name="OfflineCounterInitialValue" Encoding="HEX">06</TagValue>
+	<TagValue Tag="9F5E" To="Contact"  Name="UCOL_VISA" Encoding="HEX">02</TagValue>
+	<TagValue Tag="9F54" To="Contact"  Name="CumulativeTotalTransactionAmountLimit" Encoding="HEX" OverWrite="false">000000005000</TagValue>
+	<TagValue Tag="9F5C" To="Contact"  Name="CumulativeOfflineTransactionAmountUpperLimit" Encoding="HEX" OverWrite="false">000000010000</TagValue>
+	<TagValue Tag="9F57" To="Contact"  Name="IssuerCountryCodeVISA" Encoding="HEX">0608</TagValue>  
+	<TagValue Tag="5F28" To="Contact"  Name="IssuerCountryCode" Encoding="HEX" >0608</TagValue>
+	<TagValue Tag="9F42" To="Contact"  Name="ApplicationCurrencyCode" Encoding="HEX" OverWrite="false">0608</TagValue>
+	<TagValue Tag="9F44" To="Contact"  Name="ApplicationCurrencyCodeExponent" Encoding="HEX" OverWrite="false">02</TagValue>
+	<TagValue Tag="9F76" To="Contact"  Name="SecondaryApplicationCurrencyCode" Encoding="HEX" OverWrite="false">0840</TagValue>
+	<TagValue Tag="9F73" To="Contact"  Name="CurrencyConversionRate" Encoding="HEX" OverWrite="false">10000012</TagValue>
+	<TagValue Tag="9F45" To="Contact"  Name="DAC" Encoding="HEX">DAC1</TagValue>
+	<TagValue Tag="9F08" To="Contact"  Name="ApplicationVersionNumber" Encoding="HEX">008C</TagValue>	
+	<TagValue Tag="9F51" To="Contact"  Name="ApplicationCurrencyCode" Encoding="HEX" OverWrite="false">0608</TagValue>
+	
+	<TagValue Tag="9F55" To="Contact"  Name="GeographicIndicator" Encoding="HEX">C0</TagValue>
+	<TagValue Tag="9F56" To="Contact"  Name="IssuerAuthenticationIndicator" Encoding="HEX">80</TagValue>
+	<TagValue Tag="9F5D" To="Contact"  Name="AvailableOfflineSpendingAmount" Encoding="HEX">01</TagValue>
+	
+	<!--Contactless-->
+		
+	<TagValue Tag="DFF1" To="Contactless"  Name="SDA" Encoding="HEX" >5A,5F24,5F25,5F34,5F28,9F07,9F08,9F4A</TagValue>
+		
+	<TagValue Tag="57" To="Contactless"  Name="TRACK2 EQUIVALENT DATA" Encoding="HEX" OverWrite="true" >
+		<Tag  Type="M" Id="DF08"  Format="Value" Info="RACK2 EQUIVALENT DATA" From="EMV"/> 		
+	</TagValue>
+	
+	<TagValue Tag="9F07" To="Contactless"  Name="AUC" Encoding="HEX" >FF00</TagValue>	
+	<TagValue Tag="5F34" To="Contactless"  Name="PAN_SequenceNumber" Encoding="HEX" OverWrite="false" >00</TagValue>
+	<TagValue Tag="5F2D" To="Contactless"  Name="LanguagePreference" Encoding="ASCII" OverWrite="false" >en</TagValue>
+	<TagValue Tag="50"   To="Contactless"  Name="ApplicationLabel" Encoding="ASCII" OverWrite="false">Visa Credit</TagValue>
+
+	<TagValue Tag="9F38" To="Contactless"  Name="PDOL" Encoding="HEX">9F 66 04 9F 02 06 9F 37 04 5F 2A 02 </TagValue>	
+	<TagValue Tag="82"   To="Contactless"  Name="AIP" Encoding="HEX" >7C 00</TagValue>
+	<TagValue Tag="9F56" To="Contactless"  Name="IssuerAuthenticationIndicator" Encoding="HEX">80</TagValue>
+	<TagValue Tag="9F77" To="Contactless"  Name="VLPFundsLimit" Encoding="HEX">00 00 00 00 00 00</TagValue>
+	<TagValue Tag="9F78" To="Contactless"  Name="VLPSingleTransactionLimit" Encoding="HEX">00 00 00 20 00 00</TagValue>
+	<TagValue Tag="9F79" To="Contactless"  Name="VLPAvailableFunds" Encoding="HEX">00 00 00 00 00 00</TagValue>
+	<TagValue Tag="9F52" To="Contactless"  Name="ApplicationDefaultAction" Encoding="HEX" >82 08 00 00 </TagValue>
+	<TagValue Tag="9F10" To="Contactless"  Name="IssuerApplicationData" Encoding="HEX" >
+		<Tag  Type="S" Format="HEX" Info="1st byte of 9F10" >06</Tag>  
+		<Tag  Type="O" Id="DF07"  Format="Value" Info="DKI" From="EMV">00</Tag>  		
+		<Tag  Type="S" Format="HEX" Info="last bytes of 9F10" >11 03 00 00 00</Tag>	
+	</TagValue>			
+	<TagValue Tag="9F68" To="Contactless"  Name="CardAdditionalProcess" Encoding="HEX" >80 00 10 00</TagValue> <!-- VISA CARD-->
+	<TagValue Tag="9F69" To="Contactless"  Name="CardAuthenticationRelatedData" Encoding="HEX">01 00 00 00 00 00 00</TagValue> 
+	<TagValue Tag="9F6B" To="Contactless"  Name="CardCVMLimit" Encoding="HEX">00 00 00 10 00 00</TagValue> 		
+	<TagValue Tag="9F6C" To="Contactless"  Name="CardTransactionQualifiers" Encoding="HEX">30 00</TagValue>
+	<TagValue Tag="9F49" To="Contactless"  Name="DDOL" Encoding="HEX">9F3704</TagValue>	
+
+</Application>
+   
+</ApplicationMapping>

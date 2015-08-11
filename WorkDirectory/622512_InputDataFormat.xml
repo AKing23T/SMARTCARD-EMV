@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<DataTranslationProfile Version="1.0.0" >
+	<Magstripe StartCode="#TRK#" EndCode="#" ></Magstripe>
+	<BlocSMC StartCode="#ICVV#" EndCode="#" Format="RAW_ASCII" Tag="DF25" Id="EMV" ></BlocSMC>	
+	<BlocSMC StartCode="#PIN#" EndCode="#END#" Format="RAW_ASCII" Tag="DF01" Id="EMV" ></BlocSMC>	
+</DataTranslationProfile>
